@@ -1,0 +1,20 @@
+
+<div class="container">
+    <div #Header class="header">
+
+        <div class="header__logo-container" style="display: flex; align-items: center; padding: 20px;">
+            <fa-icon [icon]='faBrain' style="color: white; display: flex; justify-content: center; align-items: center; height: 67%; font-size: 60px; margin-right: 10px;"></fa-icon>
+            <h1 class="title">CONTEXT EXPERIMENT</h1>
+        </div>
+        <div #ButtonContainer class="buttons-container">
+            <button routerLink="/home/experiment" routerLinkActive="button-active" (click)="onTabClick('experiment')">Run Standard Experiment</button>
+            <button routerLink="/home/create" routerLinkActive="button-active" (click)="onTabClick('create')">Create an Experiment</button>
+            <button routerLink="/home/manage" routerLinkActive="button-active" (click)="onTabClick('manage')">Manage Experiments</button>
+        </div>
+    </div>
+    <div class="header-block"></div>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+    
+</div>
