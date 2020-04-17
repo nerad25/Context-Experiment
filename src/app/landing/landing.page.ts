@@ -11,7 +11,8 @@ export class LandingComponent implements OnInit {
 
   faBrain=faBrain;
 
-  constructor(public router: Router) { }
+  constructor(public router: Router) { 
+  }
 
   ngOnInit(): void {
 
@@ -21,7 +22,7 @@ export class LandingComponent implements OnInit {
   }
 
   onTabClick(route: string) {
-    this.router.navigate(['home', route]);
+    this.router.navigate([route]);
   }
 
 }

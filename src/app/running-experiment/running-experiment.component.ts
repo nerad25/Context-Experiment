@@ -9,7 +9,8 @@ import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 export class RunningExperimentComponent implements OnInit {
 
   faQuestionCircle = faQuestionCircle;
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }

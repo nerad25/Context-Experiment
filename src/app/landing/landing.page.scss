@@ -17,12 +17,11 @@
         width: 100%;
         box-shadow: 0 0px 20px 0px #444444;
         z-index: 10;
-        height: 15%;
+        height: 16%;
         .header__logo-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            display: flex;
+            justify-content: center;
+
             .title {
                 display: flex;
                 align-items: center;
@@ -36,8 +35,7 @@
             }
         }
 
-
-        .buttons-container {
+        .buttons__container {
             display: flex;
             position: absolute;
             left: 0;
@@ -73,7 +71,7 @@
         }
     }
 
-    .header-block {
+    .header__block {
         height: 20%;
         position: relative;
             

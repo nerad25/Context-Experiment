@@ -1,91 +1,45 @@
-:host {
-    height: 100%;
-}
+.files__and__buttons {
+    
+    margin: 0 15%;
 
-.manage_container {
+    .manage__file__container {
 
-    display: flex;
-    flex-direction: column;
-
-    .manage_title_container {
-        padding-top: 80px;
-        padding-bottom: 20px;
-
-        .manage_title {
-            display: flex;
-            justify-content: center;
+        .files {
+            border: 2px solid rgb(8, 111, 151);
+            height: 450px;
+            box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24), 0 6px 36px 0 rgba(0,0,0,0.19)
         }
     }
 
-    .files_and_buttons {
-        
-        margin: 0 15%;
 
-        .manage_file_container {
-    
-            .files {
-                border: 2px solid rgb(8, 111, 151);
-                height: 450px;
-                box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24), 0 6px 36px 0 rgba(0,0,0,0.19)
-            }
-        }
-    
-        .manage_button_container {
+    .manage__button__container {
 
-            padding-top: 40px;
-    
-            .left_buttons_container {
-    
-                button {
-                    padding: 5px 20px;
-                    font-size: 15px;
-                    border-radius: 10%;
-                    border: 2px solid rgb(8, 111, 151);
-                    opacity: .8;
-                    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24), 0 6px 36px 0 rgba(0,0,0,0.19);
-                    float: left;
+        padding-top: 40px;
+
+        .right__buttons__container {
+            float: right;
+        } 
         
-                }
-        
-                button:active {
-                    background-color: rgb(8, 111, 151);
-                    box-shadow: 0 2px #666;
-                    transform: translateY(4px);
-                }
-        
-                button:hover {
-                    background: rgb(8, 111, 151);
-                    color: white;
-                    opacity: 1;
-                }
-    
-            }
-    
-            .right_buttons_container {
-    
-                button {
-                    padding: 5px 20px;
-                    font-size: 15px;
-                    border-radius: 10%;
-                    border: 2px solid rgb(8, 111, 151);
-                    opacity: .8;
-                    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24), 0 6px 36px 0 rgba(0,0,0,0.19);
-                    float: right;
-        
-                }
-        
-                button:active {
-                    background-color: rgb(8, 111, 151);
-                    box-shadow: 0 2px #666;
-                    transform: translateY(4px);
-                }
-        
-                button:hover {
-                    background: rgb(8, 111, 151);
-                    color: white;
-                    opacity: 1;
-                }
-            }       
+        button {
+            padding: 5px 20px;
+            font-size: 15px;
+            border-radius: 10%;
+            border: 2px solid rgb(8, 111, 151);
+            opacity: .8;
+            box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24), 0 6px 36px 0 rgba(0,0,0,0.19);
+            float: left;
         }
-    }  
-}
+
+        button:active {
+            background-color: rgb(8, 111, 151);
+            box-shadow: 0 2px #666;
+            transform: translateY(4px);
+        }
+
+        button:hover {
+            background: rgb(8, 111, 151);
+            color: white;
+            opacity: 1;
+        }
+    }
+}  
