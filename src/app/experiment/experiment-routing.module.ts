@@ -5,6 +5,8 @@ import { InstructionsPageComponent } from '../instructions-page/instructions-pag
 import { DemoCollectionComponent } from '../demo-collection/demo-collection.component';
 import { WelcomeComponent } from '../welcome/welcome.component';
 import { RunningExperimentComponent } from '../running-experiment/running-experiment.component';
+import { ExperimentEditorComponent } from '../experiment-editor/experiment-editor.component';
+/*import { ManageExpComponent } from '../manage-experiment/manage-experiment.component';*/
 
 const routes: Routes = [
     {
@@ -31,7 +33,15 @@ const routes: Routes = [
             {
                 path: 'running-experiment',
                 component: RunningExperimentComponent
-            }
+            },
+            {
+                path: 'Experiment-Editor',
+                component: ExperimentEditorComponent
+            }/*,
+            {
+                path: 'ManageExp',
+                component: ManageExpComponent
+            }*/
         ]
     }
 ]

@@ -14,9 +14,12 @@
         .title {
             display: flex;
             justify-content: center;
+            border: none; 
+            background: none; 
+            padding: 0;
         }
     }
-
+    
     .content__container {
 
         display: flex;

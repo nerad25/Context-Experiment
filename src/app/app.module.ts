@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ExperimentEditorComponent } from './experiment-editor/experiment-editor.component';
 const routes: Routes = [
   {
     path: '',
@@ -12,6 +13,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    ExperimentEditorComponent,
   ],
   imports: [
     BrowserModule,

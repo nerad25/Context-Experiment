@@ -124,7 +124,7 @@
   "defaultProject": "context-experiment",
   "schematics": {
     "@schematics/angular:component": {
-      "styleext": "scss"
+      "style": "scss"
     }
   }
 }
