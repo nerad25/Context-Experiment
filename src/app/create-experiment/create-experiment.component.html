@@ -1,0 +1,71 @@
+<div class="page__container">
+        <div class="title__container">
+            <h1 class="title">Create a New Experiment&nbsp;<button style="border: none; background: none; padding: 0;"><fa-icon [icon]='faQuestionCircle' style="color: rgb(8, 111, 151); display: flex; justify-content: center; align-items: center; font-size: 18px;"></fa-icon></button></h1>
+        </div>
+        <div class="global__time__option">
+                <label><input type="checkbox" id="timelimit" name="timelimit" value=""> Impose time limit (per item):&nbsp;</label>
+                <form><input size="5" style="border-style: black" type="text" id="time" name="time" value="" style="text-align: center" placeholder="MM:ss"></form>
+        </div>
+        <div class="content__container">
+            <div class="left__fields">
+                <div class="item__entry__fields">
+                        <div class="item__label__container">
+                            <form>
+                            <input size="25" type="text" style="justify-content: center; margin-bottom: 0;" id="item" name="item" value="" style="text-align: center" placeholder="Item Type"><br><br>
+                            </form>
+                        </div>
+                        <div style="padding-top: 25px; display: flex; justify-content: center;">
+                            <form>
+                                <input size="25" type="text" id="att1" name="att1" value="" style="text-align: center;" placeholder="Attribute 1"><br><br>
+                                <input size="25" type="text" id="att2" name="att2" value="" style="text-align: center" placeholder="Attribute 2"><br><br><br>
+                                <label style="display: flex; justify-content: center;"><input type="checkbox" id="decoyToggle" name="decoyToggle" value="">Decoy Unavailable</label><br>
+                            </form>
+                        </div>
+                </div>
+            </div>
+            <div class="right__fields">
+                <div class="option">
+                    <div class="option__label">
+                        <label for="A">A</label><br>
+                    </div>
+                    <div class="option__body">
+                        <br><form><input size="16" type="text" id="aAtt1" name="aAtt1" value="" style="text-align: center" placeholder="Attribute 1 Value"></form><br>
+                        <form><input size="16" type="text" id="aAtt2" name="aAtt2" value="" style="text-align: center" placeholder="Attribute 2 Value"></form><br>
+                        <label><input type="checkbox" id="expectedA" name="expectedA" value=""> Expected</label><br>
+                        <label><input type="checkbox" id="decoyA" name="decoyA" value=""> Decoy</label><br>
+                    </div>
+                </div>
+                <div class="option">
+                    <div class="option__label">
+                        <label for="B">B</label><br>
+                    </div>
+                    <div class="option__body">
+                        <br><form><input size="16" type="text" id="bAtt1" name="bAtt1" value="" style="text-align: center" placeholder="Attribute 1 Value"></form><br>
+                        <form><input size="16" type="text" id="bAtt2" name="bAtt2" value="" style="text-align: center" placeholder="Attribute 2 Value"></form><br>
+                        <label><input type="checkbox" id="expectedB" name="expectedB" value=""> Expected</label><br>
+                        <label><input type="checkbox" id="decoyB" name="decoyB" value=""> Decoy</label><br>
+                    </div>
+                </div>
+                <div class="option">
+                    <div class="option__label">
+                        <label for="C">C</label><br>
+                    </div>
+                    <div class="option__body">
+                        <br><form><input size="16" type="text" id="cAtt1" name="cAtt1" value="" style="text-align: center" placeholder="Attribute 1 Value"></form><br>
+                        <form><input size="16" type="text" id="cAtt2" name="cAtt2" value="" style="text-align: center" placeholder="Attribute 2 Value"></form><br>
+                        <label><input type="checkbox" id="expectedC" name="expectedC" value=""> Expected</label><br>
+                        <label><input type="checkbox" id="decoyC" name="decoyC" value=""> Decoy</label><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="add__new__container">
+            
+            <button><fa-icon [icon]='faPlusCircle' style="color: rgb(8, 111, 151);"></fa-icon>&nbsp;Add New Item</button>
+        </div>
+        <div class="buttons__container">
+            <button class="buttons">Reset</button>
+            <button class="buttons">Save</button>
+            <button class="buttons" [routerLink]="['/experiment/running-experiment']">Run</button>
+        </div>
+</div>

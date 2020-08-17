@@ -1,0 +1,44 @@
+
+.left__fields {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.right__fields {
+    margin-top: 100px;
+    display: flex;
+    text-align: center;
+    position: relative;
+
+    .attribute__labels {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-right: 30px;
+
+        .attribute__wrapper {
+            display: flex;
+            height: 150px;
+            flex-direction: column;
+            justify-content: space-evenly;
+            font-weight: bold;
+            text-align: right;
+            
+        }
+    }
+
+    .option {
+        width: 200px;
+        margin: 0 30px;
+
+        .option__body {
+            
+            justify-content: space-evenly;
+            height: 150px;
+            font-weight: bold;
+
+        }
+    }
+}

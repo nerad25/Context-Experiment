@@ -1,0 +1,35 @@
+<div class="page__container">
+    <div class="title__container">
+        <h1 class="title">Experiment Editor&nbsp;<button></button></h1>
+    </div>
+    <div class="files__and__buttons">
+        <div class="content__container">
+            <div class="paragraph__box">
+                <form class="top__container">
+                    <label>Age:&nbsp;</label>
+                    <input size="6" type="text"  id="item" name="age" value="" placeholder="">
+                    <h5 class="top__container">Current age: 25</h5>
+                    <h5 class="top__container">Current Gender: Male</h5>
+                </form>
+                <div class="bottom__container">
+                    <div class="left__container">
+                        <label>Gender:&nbsp;</label><br>
+                    </div>
+                    <form class="right__container">
+                            
+                        
+                        <input type="checkbox" id="item" name="item" value=""><label>Male&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="checkbox" id="item" name="item" value=""><label>Female&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="checkbox" id="item" name="item" value=""><label>Other:&nbsp;</label><input size="15" type="text"  id="item" name="item" value="" placeholder="Please specify">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="manage__button__container">
+            <div>
+               <button [routerLink]="['/experiment/welcome']">Back</button>
+                <button>Save</button>
+            </div>
+        </div>
+    </div>
+</div>
