@@ -1,5 +1,62 @@
 /* You can add global styles to this file, and also import other style files. */
 
+.page__container {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .title__container {
+
+        padding-top: 30px;
+        padding-bottom: 60px;
+
+        .title {
+            display: flex;
+            justify-content: center;
+            border: none; 
+            background: none; 
+            padding: 0;
+        }
+    }
+    
+    .content__container {
+
+        display: flex;
+        padding: 0 0;
+        text-align: center;
+        justify-content: center;
+    }
+    .buttons__container {
+
+        display: flex;
+        position: relative;
+        justify-content: center;
+        padding: 130px 0;
+
+        .buttons {
+
+            padding: 0 20px;
+            font-size: 25px;
+            border-radius: 10%;
+            border: 1px solid rgb(8, 111, 151);
+            opacity: .8;
+            padding: 5px 15px;
+            box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24), 0 6px 36px 0 rgba(0,0,0,0.19);
+        }
+
+        .buttons:active {
+            background-color: rgb(8, 111, 151);
+            box-shadow: 0 2px #666;
+            transform: translateY(4px);
+        }
+        .buttons:hover {
+            background: rgb(8, 111, 151);
+            color: white;
+            opacity: 1;
+        }
+    }
+}
 
 .paragraph__box {
     border: 2px solid rgb(8, 111, 151);
