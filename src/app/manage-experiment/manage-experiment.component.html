@@ -1,10 +1,10 @@
 <div class="page__container">
         <div class="title__container">
-            <h1 class="title">Experiment Manager&nbsp;<button style="border: none; background: none; padding: 0;"><fa-icon [icon]='faQuestionCircle' style="color: rgb(8, 111, 151); display: flex; justify-content: center; align-items: center; font-size: 18px;"></fa-icon></button></h1>
+            <h1 class="title">Active Experiment: Experiment 1&nbsp;<button style="border: none; background: none; padding: 0;"><fa-icon [icon]='faQuestionCircle' style="color: rgb(8, 111, 151); display: flex; justify-content: center; align-items: center; font-size: 18px;"></fa-icon></button></h1>
         </div>
         <div class="files__and__buttons">
             <div class="manage__file__container">
-                <table id="customers">
+                <table id="Experiments">
                     <tr>
                       <th>Experiment Name</th>
                       <th>Number of Participants</th>
@@ -91,7 +91,7 @@
                     <button [routerLink]="['/experiment/Experiment-Editor']" class="buttons">Edit</button>
                 </div>
                 <div class="right__buttons__container">
-                    <button [routerLink]="['/experiment/running-experiment']">Set</button>
+                    <button [routerLink]="['/experiment/running-experiment']">Set Active</button>
                 </div>
             </div>
         </div>
