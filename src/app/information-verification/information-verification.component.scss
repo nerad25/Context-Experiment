@@ -1,0 +1,41 @@
+.paragraph__box {
+
+    display: flex;
+    flex-direction: column;
+    padding: 55px 50px;
+    width: 600px;
+
+    .top__container {
+
+        display: flex;
+        flex-direction: start;
+        align-items: center;
+        justify-content: center;
+        margin: 30px;
+        font-weight: bold;
+
+    }
+
+    .bottom__container {
+
+        display: flex;
+        justify-content: center;
+        margin: 30px;
+
+
+        .left__container {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            font-weight: bold;
+
+        }
+
+        .right__container {
+            display: flex;
+            align-items: center;
+            
+        }
+    }
+
+}
