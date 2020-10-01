@@ -4,18 +4,15 @@
 
         <div class="header__logo-container" style="display: flex; align-items: center; padding: 20px;">
             <fa-icon [icon]='faBrain' style="color: white; display: flex; justify-content: center; align-items: center; height: 67%; font-size: 70px; margin-right: 10px;"></fa-icon>
-            <!-- <h1 class="title">CONTEXT EXPERIMENT</h1> -->
         </div>
         <div class="buttons__container">
             <button routerLink="/experiment" routerLinkActive="button-active" (click)="onTabClick('experiment')">Run Experiment</button>
-            <button routerLink="/create" routerLinkActive="button-active" (click)="onTabClick('create')">Create an Experiment</button>
             <button routerLink="/manage" routerLinkActive="button-active" (click)="onTabClick('manage')">Manage Experiments</button>
         </div>
     </div>
+    
     <div class="header__block"></div>
-    <div>
-        <router-outlet></router-outlet>
-    </div>    
-
-
+        <div>
+            <router-outlet></router-outlet>
+        </div>    
 </div>
