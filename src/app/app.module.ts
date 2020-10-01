@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ExperimentEditorComponent } from './experiment-editor/experiment-editor.component';
+import { InformationVerificationComponent } from './information-verification/information-verification.component';
+import { SubmitDataComponent } from './submit-data/submit-data.component';
 const routes: Routes = [
   {
     path: '',
@@ -14,6 +16,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     ExperimentEditorComponent,
+    InformationVerificationComponent,
+    SubmitDataComponent,
   ],
   imports: [
     BrowserModule,
