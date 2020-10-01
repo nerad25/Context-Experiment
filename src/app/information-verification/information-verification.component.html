@@ -1,0 +1,28 @@
+<div class="page__container">
+    <div class="title__container">
+        <h1 class="title">Information Verification</h1>
+    </div>
+    <div class="content__container">
+        <div class="paragraph__box">
+            <form class="top__container">
+                <label>Age:&nbsp;</label>
+                <input size="6" type="text"  id="item" name="age" value="" placeholder="25">
+            </form>
+            <div class="bottom__container">
+                <div class="left__container">
+                    <label>Gender:&nbsp;</label><br>
+                </div>
+                <form class="right__container">
+                        
+                    
+                    <input type="checkbox" id="item" name="item" value="" checked><label>Male&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="checkbox" id="item" name="item" value=""><label>Female&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="checkbox" id="item" name="item" value=""><label>Other:&nbsp;</label><input size="15" type="text"  id="item" name="item" value="" placeholder="Please specify">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="buttons__container">
+            <button [routerLink]="['/experiment/submit-data']" class="buttons">Next</button>
+    </div>
+</div>

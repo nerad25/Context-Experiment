@@ -6,6 +6,7 @@ import { DemoCollectionComponent } from '../demo-collection/demo-collection.comp
 import { RunningExperimentComponent } from '../running-experiment/running-experiment.component';
 import { CommonModule } from '@angular/common';
 import { WelcomeComponent } from '../welcome/welcome.component';
+import { CreateExperimentComponent} from '../create-experiment/create-experiment.component';
 
 @NgModule({
     declarations: [ExperimentComponent, WelcomeComponent, InstructionsPageComponent, DemoCollectionComponent, RunningExperimentComponent],
