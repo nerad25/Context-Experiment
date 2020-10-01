@@ -6,7 +6,9 @@ import { DemoCollectionComponent } from '../demo-collection/demo-collection.comp
 import { WelcomeComponent } from '../welcome/welcome.component';
 import { RunningExperimentComponent } from '../running-experiment/running-experiment.component';
 import { ExperimentEditorComponent } from '../experiment-editor/experiment-editor.component';
-/*import { ManageExpComponent } from '../manage-experiment/manage-experiment.component';*/
+import { CreateExperimentComponent} from '../create-experiment/create-experiment.component';
+import { InformationVerificationComponent } from '../information-verification/information-verification.component';
+import { SubmitDataComponent} from '../submit-data/submit-data.component';
 
 const routes: Routes = [
     {
@@ -37,11 +39,19 @@ const routes: Routes = [
             {
                 path: 'Experiment-Editor',
                 component: ExperimentEditorComponent
-            }/*,
+            },
             {
-                path: 'ManageExp',
-                component: ManageExpComponent
-            }*/
+                path: 'create',
+                component: CreateExperimentComponent
+            },
+            {
+                path: 'information-verification',
+                component: InformationVerificationComponent
+            },
+            {
+                path: 'submit-data',
+                component: SubmitDataComponent
+            }
         ]
     }
 ]

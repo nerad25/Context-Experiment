@@ -1,26 +1,102 @@
 <div class="page__container">
         <div class="title__container">
-            <h1 class="title">Experiment Manager&nbsp;<button style="border: none; background: none; padding: 0;"><fa-icon [icon]='faQuestionCircle' style="color: rgb(8, 111, 151); display: flex; justify-content: center; align-items: center; font-size: 18px;"></fa-icon></button></h1>
+            <h1 class="title">Active Experiment: Experiment 1&nbsp;
+              <button id="help" style="border: none; background: none; padding: 0;">
+                <fa-icon [icon]='faQuestionCircle' style="color: rgb(8, 111, 151); display: flex; justify-content: center; align-items: center; font-size: 18px;"></fa-icon></button></h1>
         </div>
         <div class="files__and__buttons">
             <div class="manage__file__container">
-                <div class="files">
-                    <ol>
-                        <li>File 1</li>
-                        <li>File 2</li>
-                        <li>File 3</li>
-                        <li>File 4</li>
-                        <li>File 5</li>
-                    </ol>
-                </div>
+                <table id="Experiments">
+                    <tr>
+                      <th class="tooltip"><span class="tooltipText">The name of the experiment.</span>Experiment Name</th>
+                      <th class="tooltip"><span class="tooltipText">The number of people who have taken this experiment.</span>Number of Participants</th>
+                      <th class="tooltip"><span class="tooltipText">The date this experiment was created.</span>Date Created</th>
+                      <th class="tooltip"><span class="tooltipText">The date this experiment was last taken.</span>Date Last Taken</th>
+                      <th class="tooltip"><span class="tooltipText">If checked, the experiment contains some issue affecting data integrity.</span>Contains Error?</th>
+                    </tr>
+                    <tr>
+                      <td>Experiment 1</td>
+                      <td>20</td>
+                      <td>9/24/19</td>
+                      <td>2/20/20</td>
+                      <td>Yes</td>
+                    </tr>
+                    <tr>
+                      <td>Berglunds snabbköp</td>
+                      <td>Christina Berglund</td>
+                      <td>Sweden</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Centro comercial Moctezuma</td>
+                      <td>Francisco Chang</td>
+                      <td>Mexico</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Ernst Handel</td>
+                      <td>Roland Mendel</td>
+                      <td>Austria</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Island Trading</td>
+                      <td>Helen Bennett</td>
+                      <td>UK</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Königlich Essen</td>
+                      <td>Philip Cramer</td>
+                      <td>Germany</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Laughing Bacchus Winecellars</td>
+                      <td>Yoshi Tannamuri</td>
+                      <td>Canada</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Magazzini Alimentari Riuniti</td>
+                      <td>Giovanni Rovelli</td>
+                      <td>Italy</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>North/South</td>
+                      <td>Simon Crowther</td>
+                      <td>UK</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Paris spécialités</td>
+                      <td>Marie Bertrand</td>
+                      <td>France</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    
+                  </table>
             </div>
             <div class="manage__button__container">
                 <div>
-                    <button [routerLink]="['/experiment/Experiment-Editor']" class="buttons">Edit</button>
-                    <button>Delete</button>
+                    <button [routerLink]="['/experiment/create']" id="createButton" class="buttons">Create
+                      <span class="tooltipText">This button allows you to create a new experiment from scratch.</span></button>
+                    <button [routerLink]="['/experiment/Experiment-Editor']" id="editButton" class="buttons">Edit
+                      <span class="tooltipText">This button creates a duplicate of the selected experiment and allows you to edit the copy.</span></button>
                 </div>
                 <div class="right__buttons__container">
-                    <button [routerLink]="['/experiment/running-experiment']">Run</button>
+                    <button [routerLink]="['/experiment/running-experiment']" id="activeExpButton" class="activeExp">Set Active
+                      <span class="tooltipText">This button sets the selected experiment as the experiment to run on the Run Experiment tab.</span></button>
                 </div>
             </div>
         </div>
