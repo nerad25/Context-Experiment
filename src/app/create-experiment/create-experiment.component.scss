@@ -1,9 +1,22 @@
+.content__container_create {
 
-.global__time__option {
+    display: flex;
+    padding: 0 0;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.title_and_timeLimit {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
+
+    #expName
+    {
+        margin-right: 50px;
+    }
 }
 
 
