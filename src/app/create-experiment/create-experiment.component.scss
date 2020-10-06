@@ -1,9 +1,14 @@
 
-.global__time__option {
+.title_and_timeLimit {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
+
+    #expName
+    {
+        margin-right: 50px;
+    }
 }
 
 
