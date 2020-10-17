@@ -87,15 +87,18 @@
                     
                   </table>
             </div>
+
             <div class="manage__button__container">
                 <div>
-                    <button [routerLink]="['/experiment/create']" id="createButton" class="buttons">Create
+                    <button [routerLink]="['/create']" id="createButton" class="buttons">Create
                       <span class="tooltipText">This button allows you to create a new experiment from scratch.</span></button>
-                    <button [routerLink]="['/experiment/Experiment-Editor']" id="editButton" class="buttons">Edit
+                    
+                      <button  id="editButton" class="buttons">Duplicate
                       <span class="tooltipText">This button creates a duplicate of the selected experiment and allows you to edit the copy.</span></button>
                 </div>
+
                 <div class="right__buttons__container">
-                    <button [routerLink]="['/experiment/running-experiment']" id="activeExpButton" class="activeExp">Set Active
+                    <button id="activeExpButton" class="activeExp">Set Active
                       <span class="tooltipText">This button sets the selected experiment as the experiment to run on the Run Experiment tab.</span></button>
                 </div>
             </div>
