@@ -66,4 +66,126 @@
             opacity: 1;
         }
     }
+
+    .tooltip{
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: rgb(8, 111, 151);
+        color: white;
+        position: relative;
+    }
+
+    .tooltip .tooltipText {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 1s;
+        width: 260px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -130px;
+
+        position: absolute;
+        z-index: 1;
+    }
+
+    .tooltip .tooltipText::after {
+        content: " ";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+    }
+
+    .tooltip:hover .tooltipText {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    
+    .activeExp{
+        position: relative;
+        display: inline-block;
+    }
+
+    .activeExp .tooltipText {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 1s;
+        width: 260px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -130px;
+
+        position: absolute;
+        z-index: 1;
+    }
+
+    .activeExp .tooltipText::after {
+        content: " ";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+    }
+
+    .activeExp:hover .tooltipText {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .buttons {
+        position: relative;
+        display: inline-block;
+    }
+
+    .buttons .tooltipText {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 1s;
+        width: 260px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -130px;
+
+        position: absolute;
+        z-index: 1;
+    }
+
+    .buttons .tooltipText::after {
+        content: " ";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+    }
+
+    .buttons:hover .tooltipText {
+        opacity: 1;
+        visibility: visible;
+    }
 }  
