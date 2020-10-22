@@ -41,20 +41,21 @@
             left: 0;
             bottom: 0;
             right: 0;
-            align-items: flex-end;
+            // align-items: flex-end;
             justify-content: center;
             height: 30%;
             button {
-                font-size: 15px;
+                font-size: 18px;
                 display: flex;
                 justify-content: center;
-                width: calc(100% / 3);
-                text-align: center;
+                align-items: center;
+                width: calc(100% / 2);
+                // text-align: center;
                 height: 100%;
-                font-weight: bolder;
+                font-weight: bold;
                 opacity: 0.8;
-                text-align: center;
-                float: left;
+                // text-align: center;
+                // float: left;
                 border: none;
                 outline: none;
             }
