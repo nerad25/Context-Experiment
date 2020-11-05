@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
+import { APIService } from '../services/api.service'
 
 @Component({
   selector: 'app-manage-experiment',
@@ -9,9 +10,13 @@ import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 export class ManageExperimentComponent implements OnInit {
 
   faQuestionCircle=faQuestionCircle;
-  constructor() { }
+
+
+
+  constructor(private apiService:APIService) { }
 
   ngOnInit(): void {
+    
   }
 
 }
