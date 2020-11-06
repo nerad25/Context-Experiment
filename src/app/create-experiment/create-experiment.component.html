@@ -75,7 +75,7 @@
             <button (click)="cloneQuestion()"><fa-icon [icon]='faPlusCircle' style="color: rgb(8, 111, 151);"></fa-icon>&nbsp;Add New Item</button>
         </div>
         <div class="buttons__container">
-            <button (click)="resetQuestions()">Reset</button>
+            <button class="buttons" (click)="resetQuestions()">Reset</button>
             <button class="buttons">Save</button>
             <button class="buttons" [routerLink]="['/experiment/running-experiment']">Run</button>
         </div>

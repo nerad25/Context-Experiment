@@ -33,6 +33,7 @@ export class CreateExperimentComponent implements OnInit {
   {
     const template = this.template.createEmbeddedView(null);
     this.viewContainer.clear();
+    this.currNumItems = 1;
   }
 
 }
