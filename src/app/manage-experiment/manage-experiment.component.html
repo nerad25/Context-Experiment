@@ -1,8 +1,6 @@
 <div class="page__container">
         <div class="title__container">
-            <h1 class="title">Active Experiment: Experiment 1&nbsp;
-              <button id="help" style="border: none; background: none; padding: 0;">
-                <fa-icon [icon]='faQuestionCircle' style="color: rgb(8, 111, 151); display: flex; justify-content: center; align-items: center; font-size: 18px;"></fa-icon></button></h1>
+            <h1 class="activeExperiment">Active Experiment: Experiment 2</h1>
         </div>
         <div class="files__and__buttons">
             <div class="manage__file__container">
@@ -13,76 +11,87 @@
                       <th class="tooltip"><span class="tooltipText">The date this experiment was created.</span>Date Created</th>
                       <th class="tooltip"><span class="tooltipText">The date this experiment was last taken.</span>Date Last Taken</th>
                       <th class="tooltip"><span class="tooltipText">If checked, the experiment contains some issue affecting data integrity.</span>Contains Error?</th>
+                      <th>Set Active</th>
                     </tr>
                     <tr>
-                      <td>Experiment 1</td>
+                      <td class='expName'>Experiment 1</td>
                       <td>20</td>
                       <td>9/24/19</td>
                       <td>2/20/20</td>
                       <td>Yes</td>
+                      <td><button type="button" class="activeButton" >Activate</button></td>
                     </tr>
                     <tr>
-                      <td>Experiment 2</td>
+                      <td class='expName'>Experiment 2</td>
                       <td>30</td>
                       <td>9/25/19</td>
                       <td>2/22/20</td>
                       <td>No</td>
+                      <td><button type="button" class="activeButton" >Activate</button></td>
                     </tr>
                     <tr>
-                      <td>Experiment 3</td>
-                      <td>24</td>
-                      <td>9/14/19</td>
-                      <td>1/20/20</td>
+                      <td class='expName'>Experiment 3</td>
+                      <td>23</td>
+                      <td>9/20/19</td>
+                      <td>6/23/20</td>
                       <td>No</td>
+                      <td><button type="button" class="activeButton" >Activate</button></td>
                     </tr>
                     <tr>
-                      <td>Experiment 4</td>
-                      <td>7</td>
-                      <td>10/24/19</td>
-                      <td>7/20/20</td>
+                      <td class='expName'>Experiment 4</td>
+                      <td>260</td>
+                      <td>7/25/19</td>
+                      <td>2/8/20</td>
+                      <td>No</td>
+                      <td><button type="button" class="activeButton" >Activate</button></td>
+                    </tr>
+                    <tr>
+                      <td class='expName'>Experiment 5</td>
+                      <td>32</td>
+                      <td>12/25/19</td>
+                      <td>2/18/20</td>
+                      <td>No</td>
+                      <td><button type="button" class="activeButton" >Activate</button></td>
+                    </tr>
+                    <tr>
+                      <td class='expName'>Experiment 6</td>
+                      <td>2</td>
+                      <td>10/12/19</td>
+                      <td>4/12/20</td>
                       <td>Yes</td>
+                      <td><button type="button" class="activeButton" >Activate</button></td>
                     </tr>
                     <tr>
-                      <td>Experiment 5</td>
-                      <td>70</td>
-                      <td>3/24/19</td>
-                      <td>2/24/20</td>
+                      <td class='expName'>Experiment 7</td>
+                      <td>65</td>
+                      <td>4/11/19</td>
+                      <td>7/2/20</td>
                       <td>No</td>
+                      <td><button type="button" class="activeButton" >Activate</button></td>
                     </tr>
                     <tr>
-                      <td>Experiment 6</td>
-                      <td>25</td>
-                      <td>3/2/19</td>
-                      <td>2/20/20</td>
+                      <td class='expName'>Experiment 8</td>
+                      <td>98</td>
+                      <td>8/20/19</td>
+                      <td>7/21/20</td>
                       <td>No</td>
+                      <td><button type="button" class="activeButton" >Activate</button></td>
                     </tr>
                     <tr>
-                      <td>Experiment 7</td>
-                      <td>36</td>
-                      <td>9/24/19</td>
-                      <td>2/20/20</td>
+                      <td class='expName'>Experiment 9</td>
+                      <td>10</td>
+                      <td>4/26/19</td>
+                      <td>7/23/20</td>
                       <td>Yes</td>
+                      <td><button type="button" class="activeButton" >Activate</button></td>
                     </tr>
                     <tr>
-                      <td>Experiment 8</td>
-                      <td>78</td>
-                      <td>9/24/19</td>
-                      <td>2/20/20</td>
+                      <td class='expName'>Experiment 10</td>
+                      <td>260</td>
+                      <td>1/5/19</td>
+                      <td>10/22/20</td>
                       <td>No</td>
-                    </tr>
-                    <tr>
-                      <td>Experiment 9</td>
-                      <td>251</td>
-                      <td>2/24/19</td>
-                      <td>6/20/20</td>
-                      <td>No</td>
-                    </tr>
-                    <tr>
-                      <td>Experiment 10</td>
-                      <td>34</td>
-                      <td>10/24/19</td>
-                      <td>1/20/20</td>
-                      <td>No</td>
+                      <td><button type="button" class="activeButton" >Activate</button></td>
                     </tr>
                     
                   </table>
@@ -97,10 +106,6 @@
                       <span class="tooltipText">This button creates a duplicate of the selected experiment and allows you to edit the copy.</span></button>
                 </div>
 
-                <div class="right__buttons__container">
-                    <button id="activeExpButton" class="activeExp">Set Active
-                      <span class="tooltipText">This button sets the selected experiment as the experiment to run on the Run Experiment tab.</span></button>
-                </div>
             </div>
         </div>
 </div>
