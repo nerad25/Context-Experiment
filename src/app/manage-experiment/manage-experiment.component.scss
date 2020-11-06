@@ -1,4 +1,10 @@
-
+.activeExperiment {
+    display: flex;
+    justify-content: center;
+    border: none; 
+    background: none; 
+    padding: 0;
+}
 .files__and__buttons {
     
     margin: 0 15%;
@@ -38,10 +44,6 @@
     .manage__button__container {
 
         padding-top: 40px;
-
-        .right__buttons__container {
-            float: right;
-        } 
         
         button {
             padding: 5px 20px;
@@ -188,4 +190,4 @@
         opacity: 1;
         visibility: visible;
     }
-}  
+}

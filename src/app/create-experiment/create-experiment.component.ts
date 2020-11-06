@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, OnInit, ElementRef, TemplateRef, ViewChild, ViewContainerRef, ComponentRef } from '@angular/core';
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 
@@ -12,6 +12,7 @@ export class CreateExperimentComponent implements OnInit {
 
   faPlusCircle = faPlusCircle;
   faQuestionCircle = faQuestionCircle;
+  currNumItems = 1;
   
   name = 'Angular';
   @ViewChild('viewContainer', {read: ViewContainerRef}) viewContainer: ViewContainerRef;
@@ -25,6 +26,7 @@ export class CreateExperimentComponent implements OnInit {
   cloneQuestion() {
     const template = this.template.createEmbeddedView(null);
     this.viewContainer.insert(template);
+    this.currNumItems++;
   }
 
 }
