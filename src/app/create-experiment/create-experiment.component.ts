@@ -29,4 +29,11 @@ export class CreateExperimentComponent implements OnInit {
     this.currNumItems++;
   }
 
+  resetQuestions()
+  {
+    const template = this.template.createEmbeddedView(null);
+    this.viewContainer.clear();
+    this.currNumItems = 1;
+  }
+
 }
