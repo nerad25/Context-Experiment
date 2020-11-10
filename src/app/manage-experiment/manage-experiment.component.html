@@ -102,7 +102,7 @@
                     <button [routerLink]="['/create']" id="createButton" class="buttons">Create
                       <span class="tooltipText">This button allows you to create a new experiment from scratch.</span></button>
                     
-                      <button  id="editButton" class="buttons">Duplicate
+                      <button  id="editButton" (click)="getExperimentByID()" class="buttons">Duplicate
                       <span class="tooltipText">This button creates a duplicate of the selected experiment and allows you to edit the copy.</span></button>
                 </div>
 
