@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
-import { APIService } from '../services/api.service'
+import { APIService } from '../services/api.service';
+import { expById } from '../models/expById';
 
 declare var $: any;
 
@@ -15,12 +16,15 @@ export class ManageExperimentComponent implements OnInit {
 
   faQuestionCircle=faQuestionCircle;
 
+  expByIds:expById[];
+
   
 
 
   constructor(private apiService:APIService) { }
+  
 
-  ngOnInit(): void {
+  ngOnInit() {
 
       $(".activeButton").click(function()
        {
@@ -42,7 +46,12 @@ export class ManageExperimentComponent implements OnInit {
 
   getExperimentByID()
   {
-    alert( this.apiService.getExperimentById() );
+    this.apiService.getExperimentById().subscribe(expByIds => {
+      this.expByIds = expByIds;
+      alert("Data is: " + expByIds + "\n\nNumber of experiments in database: " + expByIds.length) }
+      );
+
+    //alert( this.apiService.getExperimentById() );
   }
 
 }
