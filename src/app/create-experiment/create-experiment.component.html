@@ -1,14 +1,15 @@
 <div class="page__container">
         <div class="title__container">
-            <h1 class="title">Create a New Experiment&nbsp;<button style="border: none; background: none; padding: 0;"><fa-icon [icon]='faQuestionCircle' style="color: rgb(8, 111, 151); display: flex; justify-content: center; align-items: center; font-size: 18px;"></fa-icon></button></h1>
+            <h1 class="title">Create a New Experiment</h1>
+            <!-- <h1 class="title">Create a New Experiment&nbsp;<button style="border: none; background: none; padding: 0;"><fa-icon [icon]='faQuestionCircle' style="color: rgb(8, 111, 151); display: flex; justify-content: center; align-items: center; font-size: 18px;"></fa-icon></button></h1> -->
         </div>
         <div class="title_and_timeLimit">
-                <label for="expName">Experiment name:</label>
+                <label for="expName">Experiment name:&nbsp;</label>
                 <input type="text" id="expName" name="expName">
                 <label><input type="checkbox" id="timelimit" name="timelimit" value=""> Impose time limit (per item):&nbsp;</label>
                 <form><input size="5" style="border-style: black" type="text" id="time" name="time" value="" style="text-align: center" placeholder="MM:ss"></form>
         </div>
-        <ng-template #template>
+        <!-- <ng-template #template>
             <div class="content__container_create">
                 <div class="item_num">{{currNumItems}}</div>
                 <div class="left__fields">
@@ -69,8 +70,74 @@
             </div>
         </ng-template>
         <ng-container *ngTemplateOutlet="template"></ng-container>
-        <ng-container #viewContainer></ng-container>
-        
+        <ng-container #viewContainer></ng-container> -->
+        <ng-container *ngIf="experimentItems.length > 0">
+            <div *ngFor="let experiment of experimentItems; let i = index;" class="content__container_create">
+                <div>
+                    <div class="buttons__container" style="display: flex; padding: 0px; padding-right: 0px;">
+                        <button class="buttons" style="display: flex; font-size: 20px;" (click)="onDelete(i)">X</button>
+                    </div>
+                    <div class="item_num">
+                        <label>{{i + 1}}</label>
+                    </div>
+                </div>
+                <div class="left__fields">
+                    <div class="item__entry__fields">
+                            <div class="item__label__container">
+                                <form>
+                                <input size="20" type="text" style="justify-content: center; margin-bottom: 0;" id="item" name="item" value="" style="text-align: center" placeholder="Item Type"><br><br>
+                                </form>
+                            </div>
+                            <div style="padding-top: 25px; display: flex; justify-content: center;">
+                                <form>
+                                    <input size="15" type="text" id="att1" name="att1" value="" style="text-align: center;" placeholder="Attribute 1">&nbsp;<input size="7" type="text" id="att1unit" name="att1unit" value="" style="text-align: center;" placeholder="Unit"><br><br>
+                                    <input size="15" type="text" id="att2" name="att2" value="" style="text-align: center" placeholder="Attribute 2">&nbsp;<input size="7" type="text" id="att1unit" name="att1unit" value="" style="text-align: center;" placeholder="Unit"><br><br><br>
+                                    <label style="display: flex; justify-content: center;"><input type="checkbox" id="decoyToggle" name="decoyToggle" value="">Decoy Unavailable</label><br>
+                                </form>
+                            </div>
+                    </div>
+                </div>
+                <div class="right__fields">
+                    <div class="option">
+                        <div class="option__label">
+                            <label for="A">A</label><br>
+                        </div>
+                        <div class="option__body">
+                            <br><form><input size="16" type="text" id="aAtt1" name="aAtt1" value="" style="text-align: center" placeholder="Attribute 1 Value"></form><br>                            <form><input size="16" type="text" id="aAtt2" name="aAtt2" value="" style="text-align: center" placeholder="Attribute 2 Value"></form><br>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="option__label">
+                            <label for="B">B</label><br>
+                        </div>
+                        <div class="option__body">
+                            <br><form><input size="16" type="text" id="bAtt1" name="bAtt1" value="" style="text-align: center" placeholder="Attribute 1 Value"></form><br>
+                            <form><input size="16" type="text" id="bAtt2" name="bAtt2" value="" style="text-align: center" placeholder="Attribute 2 Value"></form><br>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="option__label">
+                            <label for="C">Decoy Targeting A</label><br>
+                        </div>
+                        <div class="option__body">
+                            <br><form><input size="16" type="text" id="cAtt1" name="cAtt1" value="" style="text-align: center" placeholder="Attribute 1 Value"></form><br>
+                            <form><input size="16" type="text" id="cAtt2" name="cAtt2" value="" style="text-align: center" placeholder="Attribute 2 Value"></form><br>
+                            <label style="display: flex; justify-content: center; padding-top: 15px;"><input type="checkbox" id="decoyTargetingA" name="decoyTargetingA" value=""> Select this decoy</label><br>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="option__label">
+                            <label for="C">Decoy Targeting B</label><br>
+                        </div>
+                        <div class="option__body">
+                            <br><form><input size="16" type="text" id="cAtt1" name="cAtt1" value="" style="text-align: center" placeholder="Attribute 1 Value"></form><br>
+                            <form><input size="16" type="text" id="cAtt2" name="cAtt2" value="" style="text-align: center" placeholder="Attribute 2 Value"></form><br>
+                            <label style="display: flex; justify-content: center; padding-top: 15px;"><input type="checkbox" id="decoyTargetingB" name="decoyTargetingB" value=""> Select this decoy</label><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container> 
         <div class="add__new__container">
             <button (click)="cloneQuestion()"><fa-icon [icon]='faPlusCircle' style="color: rgb(8, 111, 151);"></fa-icon>&nbsp;Add New Item</button>
         </div>
