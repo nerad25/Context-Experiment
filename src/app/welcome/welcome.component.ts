@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { activeExp } from '../models/activeExp';
+import { APIService } from '../services/api.service';
+
+declare var $: any;
 
 @Component({
   selector: 'app-welcome',
@@ -7,9 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor() { }
+  activeExperiment: activeExp;
+
+  constructor(private apiService:APIService) { }
 
   ngOnInit(): void {
+    this.apiService.getActiveExperiment().subscribe(data => {
+      this.activeExperiment = data[0];
+    });
   }
-
 }

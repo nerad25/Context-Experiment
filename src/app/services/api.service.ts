@@ -2,8 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import { templateJitUrl } from '@angular/compiler';
+import { identifierModuleUrl, templateJitUrl } from '@angular/compiler';
 import { expById } from '../models/expById';
+import { tableData } from '../models/tableData';
+import { activeExp } from '../models/activeExp';
 
 export interface Exper {
   expID: any,
@@ -25,9 +27,11 @@ export class APIService {
 
   constructor(private http: HttpClient) { }
 
-  temp: Exper;
 
   getExpByIdUrl:string = 'http://localhost:8080/experiments';
+  getTableDataUrl:string = 'http://localhost:8080/experiments/TableData';
+  getActiveExpUrl:string = 'http://localhost:8080/experiments/isActive/1';
+  updateActiveUrl:string = 'http://localhost:8080/experiments/updateExperimentStatus';
 
   getExperiments()
   {
@@ -37,7 +41,7 @@ export class APIService {
 
   getExperimentsByTimeLimit()
   {
-    this.http.get('localhost:8080/src/db/get-experiment-by-time-limit.js');
+   // this.http.get('localhost:8080/src/db/get-experiment-by-time-limit.js');
   }
 
   /*getExperimentById()
@@ -53,8 +57,9 @@ export class APIService {
 
   }*/
 
-  getExperimentById():Observable<expById[]> {
-    return this.http.get<expById[]>(`${this.getExpByIdUrl}`);
+  getExperimentById(id):Observable<expById[]> {
+    var url = this.getExpByIdUrl + id;
+    return this.http.get<expById[]>(`${url}`);
   }
 
   getAllSubjects()
@@ -92,8 +97,17 @@ export class APIService {
 
   }
 
-  getTableData()
-  {
+  getTableData():Observable<tableData[]> {
+    return this.http.get<tableData[]>(`${this.getTableDataUrl}`);
+  }
 
+  updateActive(exper):Observable<any>
+  {
+    console.log(exper.expID + ", " + exper.isActive);
+    return this.http.put(`${this.updateActiveUrl}/${exper.expID}/${exper.isActive}`, exper, httpOptions);
+  }
+
+  getActiveExperiment():Observable<activeExp[]> {
+    return this.http.get<activeExp[]>(`${this.getActiveExpUrl}`);
   }
 }
