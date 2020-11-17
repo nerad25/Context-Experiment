@@ -2,12 +2,12 @@
     <div class="upperSection">
     <div class="title__container_welcome">
         <h1 class="title">Welcome!</h1><br>
-        <h3 class="current_experiment">Subject taking experiment 1</h3>
+        <h3 class="current_experiment">Active Experiment: {{activeExperiment.experimentName}}</h3>
     </div>
     <div class="content__container">
         <p class="paragraph__box">Click "Start" to start an experiment with the standard set of data.<br><br><br><br>You can also create custom experiments or manage saved experiments using the tabs above.</p>
     </div>
-    </div>>
+    </div>
     <div class="buttons__container_welcome">
         <button [routerLink]="['/experiment/instructions']" class="buttons">START</button>
     </div>
