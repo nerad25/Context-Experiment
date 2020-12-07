@@ -1,10 +1,11 @@
 <div class="page__container">
         <div class="title__container">
-            <h1 class="activeExperiment">Active Experiment: Experiment 2</h1>
+            <h1 id="activeExperiment" class="activeExperiment">Active Experiment: {{activeExper.experimentName}}</h1>
         </div>
         <div class="files__and__buttons">
             <div class="manage__file__container">
                 <table id="Experiments">
+                  <thead>
                     <tr>
                       <th class="tooltip"><span class="tooltipText">The name of the experiment.</span>Experiment Name</th>
                       <th class="tooltip"><span class="tooltipText">The number of people who have taken this experiment.</span>Number of Participants</th>
@@ -13,7 +14,19 @@
                       <th class="tooltip"><span class="tooltipText">If checked, the experiment contains some issue affecting data integrity.</span>Contains Error?</th>
                       <th>Set Active</th>
                     </tr>
-                    <tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let exper of tableData">
+                      <td class='expName'>{{exper.experimentName}}</td>
+                      <td>{{exper.participants}}</td>
+                      <td>{{exper.dateCreated | date}}</td>
+                      <td>{{exper.dateTaken | date}}</td>
+                      <!--<td>{{exper.containsError == 1 ? 'Yes' : 'No'}}</td> -->
+                      <td>No</td>
+                      <td><button type="button" (click)="activeClick(exper)" class="activeButton">Activate</button></td>
+                      <!--<td><button type="button" (click)="activeClick(exper)" class="activeButton" >Activate</button></td>-->
+                    </tr>
+ <!--                   <tr>
                       <td class='expName'>Experiment 1</td>
                       <td>20</td>
                       <td>9/24/19</td>
@@ -92,9 +105,12 @@
                       <td>10/22/20</td>
                       <td>No</td>
                       <td><button type="button" class="activeButton" >Activate</button></td>
-                    </tr>
+                    </tr> -->
                     
+                  </tbody>
                   </table>
+
+                  
             </div>
 
             <div class="manage__button__container">
@@ -102,7 +118,7 @@
                     <button [routerLink]="['/create']" id="createButton" class="buttons">Create
                       <span class="tooltipText">This button allows you to create a new experiment from scratch.</span></button>
                     
-                      <button  id="editButton" (click)="getExperimentByID()" class="buttons">Duplicate
+                      <button  id="editButton" class="buttons">Duplicate
                       <span class="tooltipText">This button creates a duplicate of the selected experiment and allows you to edit the copy.</span></button>
                 </div>
 
